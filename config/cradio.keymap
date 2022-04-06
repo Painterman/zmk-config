@@ -96,6 +96,8 @@
 		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
 					 &trans &trans  					&trans &trans 
 		>;
+
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};	
         
 	};
