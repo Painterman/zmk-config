@@ -59,7 +59,7 @@
                 <&kp PLUS>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         Qmark_mod: Qmark_mod {
             compatible = "zmk,behavior-mod-morph";
