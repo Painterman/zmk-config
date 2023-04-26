@@ -60,7 +60,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <()>;
         };
         Qmark_mod: Qmark_mod {
             compatible = "zmk,behavior-mod-morph";
@@ -89,27 +89,27 @@
 
         Number {
             bindings = <
-           &kp N1       &kp N2            &kp N3                 &kp N4    &kp N5      &kp N6           &kp N7    &kp N8             &kp N9         &kp N0
-&kp RIGHT_BRACKET    &kp SLASH   &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS   &kp TAB    &sk RGUI  &sk RIGHT_SHIFT  &sk RALT  &sk RIGHT_CONTROL  &kp BACKSPACE
-           &trans  &kp PERCENT  &kp LEFT_BRACKET       &kp RA(NUMBER_4)     &none       &none            &none     &none              &none        &kp DEL
-                                                                 &trans  &kp LGUI    &kp RGUI           &trans
+           &kp N1       &kp N2                &kp N3                 &kp N4    &kp N5      &kp N6           &kp N7    &kp N8             &kp N9         &kp N0
+&kp RIGHT_BRACKET    &kp SLASH       &kp RIGHT_BRACE  &kp RIGHT_PARENTHESIS   &kp TAB    &sk RGUI  &sk RIGHT_SHIFT  &sk RALT  &sk RIGHT_CONTROL  &kp BACKSPACE
+           &trans  &kp PERCENT  &kp LS(LEFT_BRACKET)       &kp RA(NUMBER_4)     &none       &none            &none     &none              &none        &kp DEL
+                                                                     &trans  &kp LGUI    &kp RGUI           &trans
             >;
         };
 
         Symbol {
             bindings = <
-&Excl_mod      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)       &kp SQT  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &Qmark_mod
-&sk RCTRL              &sk RALT    &sk LEFT_SHIFT  &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT      &trans
-   &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)    &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH      &trans
+&Excl_mod      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)   &kp RA(SQT)  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)     &Qmark_mod
+&sk RCTRL              &sk RALT    &sk LEFT_SHIFT  &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT  &kp BACKSPACE
+   &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)    &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH        &kp DEL
                                                          &trans              &none            &none                &trans
             >;
         };
 
         FUN {
             bindings = <
-      &kp F1        &kp F2           &kp F3            &kp F4      &kp F5    &kp F6       &kp F7    &kp F8         &kp F9  &kp F10
-       &none         &none  &kp PRINTSCREEN           &kp INS       &none     &none  &kp PAGE_UP    &kp UP  &kp PAGE_DOWN   &trans
-&kp K_VOL_DN  &kp K_VOL_UP       &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_NEXT     &none     &kp LEFT  &kp DOWN      &kp RIGHT   &trans
+      &kp F1        &kp F2           &kp F3            &kp F4      &kp F5    &kp F6       &kp F7    &kp F8         &kp F9        &kp F10
+       &none         &none  &kp PRINTSCREEN           &kp INS       &none     &none  &kp PAGE_UP    &kp UP  &kp PAGE_DOWN  &kp BACKSPACE
+&kp K_VOL_DN  &kp K_VOL_UP       &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_NEXT     &none     &kp LEFT  &kp DOWN      &kp RIGHT        &kp DEL
                                                        &trans       &none     &none       &trans
             >;
         };
