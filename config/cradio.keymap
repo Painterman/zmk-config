@@ -38,6 +38,16 @@
             bindings = <&sl 4>;
             key-positions = <30 31 32 33 31>;
         };
+
+        Fun_L {
+            bindings = <&sl 3>;
+            key-positions = <31 30>;
+        };
+
+        Fun_R {
+            bindings = <&sl 3>;
+            key-positions = <33 32>;
+        };
     };
 
     behaviors {
@@ -46,6 +56,17 @@
             label = "EXCL_MOD";
             bindings =
                 <&kp EXCL>,
+                <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        Qmark_mod: Qmark_mod {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QMARK_MOD";
+            bindings =
+                <&kp UNDER>,
                 <&kp PLUS>;
 
             #binding-cells = <0>;
@@ -61,35 +82,35 @@
             bindings = <
        &kp Q  &kp W  &kp E  &kp R   &kp T         &kp Y  &kp U      &kp I    &kp O           &kp P
        &kp A  &kp S  &kp D  &kp F   &kp G         &kp H  &kp J      &kp K    &kp L         &kp SQT
-&mt LSHIFT Z  &kp X  &kp C  &kp V   &kp B    &mt N SEMI  &kp M  &kp COMMA  &kp DOT  &mt LSHIFT RET
+&mt LSHIFT Z  &kp X  &kp C  &kp V   &kp B    &mt SEMI N  &kp M  &kp COMMA  &kp DOT  &mt LSHIFT RET
                             &sl 1  &trans     &kp SPACE  &sl 2
             >;
         };
 
         Number {
             bindings = <
-   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6       &kp N7    &kp N8         &kp N9    &kp N0
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp PAGE_UP    &kp UP  &kp PAGE_DOWN  &kp BSPC
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE     &kp LEFT  &kp DOWN      &kp RIGHT   &kp DEL
-                                    &trans   &kp LGUI     &kp RGUI       &trans
+   &kp N1     &kp N2     &kp N3     &kp N4     &kp N5       &kp N6         &kp N7           &kp N8         &kp N9             &kp N0
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &sk RIGHT_GUI  &sk RIGHT_SHIFT  &sk RIGHT_ALT  &sk RIGHT_CONTROL
+   &trans  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE       &kp LEFT         &kp DOWN      &kp RIGHT            &kp DEL
+                                    &trans   &kp LGUI     &kp RGUI         &trans
             >;
         };
 
         Symbol {
             bindings = <
-&Excl_mod  &kp RA(NUMBER_2)   &kp HASH  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp SPACE         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE     &trans
-&kp SPACE         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE     &trans
-                                           &trans  &kp SPACE    &kp SPACE     &trans
+&Excl_mod      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)       &kp SQT  &kp RA(BACKSLASH)    &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &Qmark_mod
+&sk RCTRL              &sk RALT    &sk LEFT_SHIFT  &sk LEFT_GUI             &trans      &kp TAB             &kp SPACE             &kp SPACE              &kp SPACE      &trans
+   &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)     &kp SPACE          &kp SPACE    &kp SPACE             &kp SPACE             &kp SPACE              &kp SPACE      &trans
+                                                         &trans          &kp SPACE    &kp SPACE                &trans
             >;
         };
 
         FUN {
             bindings = <
-   &kp F1     &kp F2     &kp F3     &kp F4     &kp F5       &kp F6     &kp F7     &kp F8     &kp F9    &kp F10
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-                                 &kp SPACE  &kp SPACE    &kp SPACE  &kp SPACE
+      &kp F1        &kp F2      &kp F3            &kp F4      &kp F5       &kp F6       &kp F7    &kp F8         &kp F9  &kp F10
+   &kp SPACE     &kp SPACE   &kp SPACE         &kp SPACE   &kp SPACE    &kp SPACE  &kp PAGE_UP    &kp UP  &kp PAGE_DOWN   &trans
+&kp K_VOL_DN  &kp K_VOL_UP  &kp K_MUTE  &kp K_PLAY_PAUSE  &kp K_NEXT    &kp SPACE     &kp LEFT  &kp DOWN      &kp RIGHT   &trans
+                                               &kp SPACE   &kp SPACE    &kp SPACE    &kp SPACE
             >;
         };
 
