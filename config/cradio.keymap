@@ -91,10 +91,10 @@
 
         Base {
             bindings = <
-       &kp Q  &kp W  &kp E  &kp R   &kp T          &kp Y  &kp U      &kp I    &kp O           &kp P
-       &kp A  &kp S  &kp D  &kp F   &kp G          &kp H  &kp J      &kp K    &kp L         &kp SQT
-&mt LSHIFT Z  &kp X  &kp C  &kp V   &kp B    &gqt SEMI N  &kp M  &kp COMMA  &kp DOT  &mt LSHIFT RET
-                            &sl 1  &trans      &kp SPACE  &sl 2
+       &kp Q  &kp W  &kp E  &kp R      &kp T          &kp Y  &kp U      &kp I    &kp O           &kp P
+       &kp A  &kp S  &kp D  &kp F      &kp G          &kp H  &kp J      &kp K    &kp L         &kp SQT
+&mt LSHIFT Z  &kp X  &kp C  &kp V      &kp B    &gqt SEMI N  &kp M  &kp COMMA  &kp DOT  &mt LSHIFT RET
+                            &sl 1  &kp LCTRL      &kp SPACE  &sl 2
             >;
         };
 
@@ -109,10 +109,10 @@
 
         Symbol {
             bindings = <
-&gqt EXCL PLUS      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(LEFT_BRACKET)  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &gqt UNDER EQUAL
-     &sk RCTRL              &sk RALT    &sk LEFT_SHIFT          &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT     &kp BACKSPACE
-        &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)            &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH           &kp DEL
-                                                                      &trans              &none            &none                &trans
+&gqt UNDER PLUS      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(SINGLE_QUOTE)  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &gqt PLUS EQUAL
+      &sk RCTRL              &sk RALT    &sk LEFT_SHIFT          &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT    &kp BACKSPACE
+         &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)            &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH          &kp DEL
+                                                                       &trans              &none            &none                &trans
             >;
         };
 
