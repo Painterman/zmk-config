@@ -18,13 +18,13 @@
         compatible = "zmk,combos";
 
         Esc {
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
 
         combo_tab {
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             key-positions = <10 11>;
             bindings = <&kp TAB>;
         };
@@ -32,21 +32,25 @@
         Back {
             bindings = <&kp BACKSPACE>;
             key-positions = <9 8>;
+            timeout-ms = <70>;
         };
 
         SysAd {
             bindings = <&sl 4>;
             key-positions = <30 31 32 33 31>;
+            timeout-ms = <100>;
         };
 
         Fun_L {
             bindings = <&sl 3>;
             key-positions = <31 30>;
+            timeout-ms = <100>;
         };
 
         Fun_R {
             bindings = <&sl 3>;
             key-positions = <33 32>;
+            timeout-ms = <100>;
         };
     };
 
@@ -95,7 +99,7 @@
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
-                <&kp N2 &kp N2 &kp N0 &kp N6>,
+                <&kp KP_N2 &kp KP_N2 &kp KP_N0 &kp KP_N6>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
