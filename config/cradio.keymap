@@ -127,9 +127,9 @@
 
         Symbol {
             bindings = <
-&gqt UNDER PLUS      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(SINGLE_QUOTE)  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &gqt PLUS EQUAL
-      &sk RCTRL              &sk RALT    &sk LEFT_SHIFT          &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT    &kp BACKSPACE
-         &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)            &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH          &kp DEL
+&gqt UNDER PLUS      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(SINGLE_QUOTE)  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &gqt EQUAL EXCLAMATION
+      &sk RCTRL              &sk RALT    &sk LEFT_SHIFT          &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT           &kp BACKSPACE
+         &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)            &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH                 &kp DEL
                                                                        &trans              &none            &none                &trans
             >;
         };
