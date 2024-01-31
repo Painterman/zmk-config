@@ -58,30 +58,26 @@
         Excl_mod: Excl_mod {
             compatible = "zmk,behavior-mod-morph";
             label = "EXCL_MOD";
-            bindings =
-                <&kp EXCL>,
-                <&kp PLUS>;
+            bindings = <&kp EXCL>, <&kp PLUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         Qmark_mod: Qmark_mod {
             compatible = "zmk,behavior-mod-morph";
             label = "QMARK_MOD";
-            bindings =
-                <&kp UNDER>,
-                <&kp PLUS>;
+            bindings = <&kp UNDER>, <&kp PLUS>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         gqt: gqt {
             compatible = "zmk,behavior-hold-tap";
             label = "GQT";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -113,46 +109,46 @@
 
         Base {
             bindings = <
-       &kp Q  &kp W  &kp E  &kp R      &kp T          &kp Y  &kp U      &kp I    &kp O           &kp P
-       &kp A  &kp S  &kp D  &kp F      &kp G          &kp H  &kp J      &kp K    &kp L         &kp SQT
-&mt LSHIFT Z  &kp X  &kp C  &kp V      &kp B    &gqt SEMI N  &kp M  &kp COMMA  &kp DOT  &mt LSHIFT RET
-                            &sl 1  &kp LCTRL      &kp SPACE  &sl 2
+&kp Q         &kp W  &kp E  &kp R  &kp T        &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A         &kp S  &kp D  &kp F  &kp G        &kp H        &kp J  &kp K      &kp L    &kp SQT
+&mt LSHIFT Z  &kp X  &kp C  &kp V  &kp B        &gqt SEMI N  &kp M  &kp COMMA  &kp DOT  &mt LSHIFT RET
+                            &sl 1  &kp LCTRL    &kp SPACE    &sl 2
             >;
         };
 
         Number {
             bindings = <
-           &kp N1       &kp N2                &kp N3            &kp N4                 &kp N5      &kp N6           &kp N7    &kp N8             &kp N9         &kp N0
-&kp RIGHT_BRACKET    &kp SLASH       &kp RIGHT_BRACE     &kp AMPERSAND  &kp RIGHT_PARENTHESIS    &sk RGUI  &sk RIGHT_SHIFT  &sk RALT  &sk RIGHT_CONTROL  &kp BACKSPACE
-           &trans  &kp PERCENT  &kp LS(LEFT_BRACKET)  &kp RA(NUMBER_4)                &kp TAB       &none            &none     &none              &none        &kp DEL
-                                                                &trans               &kp LGUI    &kp RGUI           &trans
+&kp N1             &kp N2       &kp N3                &kp N4            &kp N5                   &kp N6    &kp N7           &kp N8    &kp N9             &kp N0
+&kp RIGHT_BRACKET  &kp SLASH    &kp RIGHT_BRACE       &kp AMPERSAND     &kp RIGHT_PARENTHESIS    &sk RGUI  &sk RIGHT_SHIFT  &sk RALT  &sk RIGHT_CONTROL  &kp BACKSPACE
+&trans             &kp PERCENT  &kp LS(LEFT_BRACKET)  &kp RA(NUMBER_4)  &kp TAB                  &none     &none            &none     &none              &kp DEL
+                                                      &trans            &kp LGUI                 &kp RGUI  &trans
             >;
         };
 
         Symbol {
             bindings = <
-&gqt UNDER PLUS      &kp RA(NUMBER_2)  &kp RA(NUMBER_3)  &kp RA(SINGLE_QUOTE)  &kp RA(BACKSLASH)        &kp ASTRK  &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &gqt EQUAL EXCLAMATION
-      &sk RCTRL              &sk RALT    &sk LEFT_SHIFT          &sk LEFT_GUI         &kp DOLLAR          &kp TAB             &kp MINUS      &kp LEFT_BRACKET                 &kp AT           &kp BACKSPACE
-         &trans  &kp NON_US_BACKSLASH      &kp LS(NUBS)            &kp RA(N1)      &kp RA(GRAVE)    &kp AMPERSAND      &kp RA(NUMBER_6)          &kp QUESTION              &kp SLASH                 &kp DEL
-                                                                       &trans              &none            &none                &trans
+&gqt UNDER PLUS  &kp RA(NUMBER_2)      &kp RA(NUMBER_3)  &kp RA(SINGLE_QUOTE)  &kp RA(BACKSLASH)    &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RA(LEFT_BRACKET)  &kp RA(RIGHT_BRACKET)  &gqt EQUAL EXCLAMATION
+&sk RCTRL        &sk RALT              &sk LEFT_SHIFT    &sk LEFT_GUI          &kp DOLLAR           &kp TAB        &kp MINUS             &kp LEFT_BRACKET      &kp AT                 &kp BACKSPACE
+&trans           &kp NON_US_BACKSLASH  &kp LS(NUBS)      &kp RA(N1)            &kp RA(GRAVE)        &kp AMPERSAND  &kp RA(NUMBER_6)      &kp QUESTION          &kp SLASH              &kp DEL
+                                                         &trans                &none                &none          &trans
             >;
         };
 
         FUN {
             bindings = <
-      &kp F1        &kp F2           &kp F3            &kp F4          &kp F5    &kp F6       &kp F7    &kp F8         &kp F9        &kp F10
-      &micro         &none  &sk PRINTSCREEN           &kp INS  &kp KP_NUMLOCK     &none  &kp PAGE_UP    &kp UP  &kp PAGE_DOWN  &kp BACKSPACE
-&kp C_VOL_DN  &kp C_VOL_UP       &kp C_MUTE  &kp C_PLAY_PAUSE      &kp C_NEXT     &none     &kp LEFT  &kp DOWN      &kp RIGHT        &kp DEL
-                                                       &trans           &none     &none       &trans
+&kp F1        &kp F2        &kp F3           &kp F4            &kp F5            &kp F6  &kp F7       &kp F8    &kp F9         &kp F10
+&micro        &none         &sk PRINTSCREEN  &kp INS           &kp KP_NUMLOCK    &none   &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &kp BACKSPACE
+&kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE       &kp C_PLAY_PAUSE  &kp C_NEXT        &none   &kp LEFT     &kp DOWN  &kp RIGHT      &kp DEL
+                                             &trans            &none             &none   &trans
             >;
         };
 
         SysAd {
             bindings = <
-       &none         &none         &none         &none       &none    &none  &none  &none  &none  &none
-       &none         &none         &none         &none       &none    &none  &none  &none  &none  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &none  &none  &none  &none  &none
-                                                 &none       &none    &none  &none
+&none         &none         &none         &none         &none         &none  &none  &none  &none  &none
+&none         &none         &none         &none         &none         &none  &none  &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &kp B  &none  &none  &none  &none
+                                          &none         &none         &none  &none
             >;
         };
     };
