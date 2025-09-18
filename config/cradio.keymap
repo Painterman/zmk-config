@@ -104,6 +104,7 @@
         };
     };
 
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -152,4 +153,5 @@
             >;
         };
     };
+
 };
