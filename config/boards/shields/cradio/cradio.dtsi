@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 // ZMK Studio prep
-#include <config/boards/shields/cradio/cradio_layouts.dtsi>
+#include <cradio_layouts.dtsi>
 
 / {
 
