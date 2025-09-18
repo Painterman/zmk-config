@@ -69,7 +69,7 @@
 		&mt LSFT Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &mt LSFT RET
           				&mo 1 &kp LCTL  				&kp SPC &mo 2 
 		>;
-#        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+
 		};
 
        		left_layer {
@@ -97,8 +97,6 @@
 		&bt BT_CLR  &bt BT_NXT &bt BT_PRV &kp F6 &kp F7   				&trans &kp PG_DN  &kp K_VOL_DN  &trans &trans   
 					 &trans &trans  					&trans &trans 
 		>;
-
-#        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 		};	
         
