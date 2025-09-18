@@ -152,9 +152,14 @@
                                           &none         &none         &none  &none
             >;
         };
-        # ZMK Studio prep
-        Reserved1 {status = "reserved"};
-        Reserved2 {status = "reserved"};
+        // ZMK Studio prep
+        Reserved1 {
+            status = "reserved"
+        };
+        
+        Reserved2 {
+            status = "reserved"
+        };
     };
 
 };
