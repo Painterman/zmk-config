@@ -153,8 +153,8 @@
             >;
         };
         // ZMK Studio prep
-        Reserved1 {status = "reserved"};
-        Reserved2 {status = "reserved"};
+        Reserved1 {status = "reserved";};
+        Reserved2 {status = "reserved";};
     };
 
 };
