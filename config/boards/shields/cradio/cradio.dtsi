@@ -6,6 +6,9 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+// ZMK Studio prep
+#include <cradio_layouts.dtsi>
+
 / {
 
 	chosen {
@@ -49,16 +52,23 @@
 		;
 	};
 
-	left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        a-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
-    };
-	sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-    };
+	// ZMK Studio Prep, adding physical layout
+	&physical_layout0 {
+    	kscan = <&kscan0>; // Label of the kscan node this layout uses
+    	transform = <&default_transform>; // Label of the matrix transform this layout uses
+	};
+/*
+*	left_encoder: encoder_left {
+*        compatible = "alps,ec11";
+*        label = "LEFT_ENCODER";
+*        a-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+*        b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+*        resolution = <4>;
+*    };
+*	sensors {
+*        compatible = "zmk,keymap-sensors";
+*        sensors = <&left_encoder>;
+*    };
+*/
 
 };

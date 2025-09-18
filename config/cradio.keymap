@@ -37,20 +37,20 @@
 
         SysAd {
             bindings = <&sl 4>;
-            key-positions = <30 31 32 33 31>;
-            timeout-ms = <100>;
+            key-positions = <30 33>;
+            timeout-ms = <150>;
         };
 
         Fun_L {
             bindings = <&sl 3>;
             key-positions = <31 30>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
 
         Fun_R {
             bindings = <&sl 3>;
             key-positions = <33 32>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
     };
 
@@ -146,12 +146,15 @@
 
         SysAd {
             bindings = <
-&none         &none         &none         &none         &none         &none  &none  &none  &none  &none
-&none         &none         &none         &none         &none         &none  &none  &none  &none  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &kp B  &none  &none  &none  &none
+&sys_reset    &&bootloader  &none         &none         &none         &none  &none  &none  &&bootloader  &sys_reset    
+&none         &none         &none         &none         &none         &none  &none  &none  &none         &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR    &none  &none  &none  &none         &none
                                           &none         &none         &none  &none
             >;
         };
+        # ZMK Studio prep
+        Reserved1{status = "reserved"};
+        Reserved2{status = "reserved"};
     };
 
 };
